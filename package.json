@@ -1,0 +1,27 @@
+{
+  "name": "d2logger",
+  "version": "1.0.0",
+  "description": "\u0016Log your Dota 2 matches and track your improvements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R4TH4CK3R/d2logger.git"
+  },
+  "author": "HAWGT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R4TH4CK3R/d2logger/issues"
+  },
+  "homepage": "https://github.com/R4TH4CK3R/d2logger#readme",
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "positron": "^1.0.0"
+  },
+  "dependencies": {
+    "electron-json-storage": "^3.0.0"
+  }
+}

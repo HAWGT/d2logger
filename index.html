@@ -1,0 +1,67 @@
+<html>
+
+<head>
+	<title>d2logger</title>
+	<link rel="stylesheet" href="style.css">
+
+	<script src="./scripts.js" type="text/javascript"></script>
+	<script>
+		function updateIMG() {
+			if (document.getElementById("hero_select").value) {
+				document.getElementById("hero_select_img").src = "http://cdn.dota2.com/apps/dota2/images/heroes/" + document.getElementById("hero_select").value + "_sb.png";
+			} else {
+				document.getElementById("hero_select_img").src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAhCAIAAADoCkQZAAAAHElEQVRYhe3BAQ0AAADCoPdPbQ8HFAAAAAAAPBgW8gABCNvYUgAAAABJRU5ErkJggg==";
+			}
+		}
+	</script>
+
+</head>
+
+<body>
+	<div id='header'>
+		<h1>D2LOGGER</h1>
+		<h3>Log your matches and track your progress</h3>
+	</div>
+	<div class='option'>
+		<table>
+			<tr>
+				<td>Match ID:</td>
+				<td><input type="text" id="matchid_input" /></td>
+			</tr>
+			<tr>
+				<td>Hero:</td>
+				<td>
+					<script>
+						require("./resources/hero_select.js")
+					</script>
+				</td>
+				<td>
+					<img id="hero_select_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAhCAIAAADoCkQZAAAAHElEQVRYhe3BAQ0AAADCoPdPbQ8HFAAAAAAAPBgW8gABCNvYUgAAAABJRU5ErkJggg=="></img>
+				</td>
+			</tr>
+			<tr>
+				<td>Improvements:</td>
+				<td><textarea id="improvements_input" rows="8" cols="32"></textarea></td>
+			</tr>
+			<tr>
+				<td>Mistakes:</td>
+				<td><textarea id="mistakes_input" rows="8" cols="32"></textarea></td>
+			</tr>
+			<tr>
+				<td>Notes:</td>
+				<td><textarea id="notes_input" rows="8" cols="32"></textarea></td>
+			</tr>
+			<tr>
+				<td><input type="button" onclick="saveLog()" value="Save Log" /></td>
+			</tr>
+		</table>
+	</div>
+	<div class='option'>
+	</div>
+	<div id='footer'>
+		Created by
+		<span>HAWGT</span>, <a>http://github.com/R4TH4CK3R</a>, <a>http://steamcommunity.com/profiles/76561198017577802</a>
+	</div>
+</body>
+
+</html>
