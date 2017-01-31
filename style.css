@@ -111,11 +111,42 @@ input, select, textarea {
     outline-color #00FF00;
 }
 
-img, table{
-  display: block;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow: hidden;
+img, table {
+    display: block;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#view {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: #00FFFF;
+    padding: 8px;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: #278BEF;
+    float: left;
+    margin: 0;
+    width: 50%;
+    height: 80%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
