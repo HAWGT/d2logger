@@ -12,6 +12,23 @@ function saveLog() {
     var mistakes = document.getElementById('mistakes_input').value
     var notes = document.getElementById('notes_input').value
 
+    String.prototype.escapeForJson = function() {
+        return this
+            .replace(/\b/g, "")
+            .replace(/\f/g, "")
+            .replace(/\\/g, "\\")
+            .replace(/\"/g, "\\\"")
+            .replace(/\t/g, "\\t")
+            .replace(/\r/g, "\\r")
+            .replace(/\n/g, "\\n")
+            .replace(/\u2028/g, "\\u2028")
+            .replace(/\u2029/g, "\\u2029");
+    };
+
+    var improvements = improvements.escapeForJson()
+    var mistakes = improvements.escapeForJson()
+    var notes = improvements.escapeForJson()
+
     if (matchid == '' || matchid == null) {
         alert("Please fill in the Match ID!")
         return 1;
